@@ -35,7 +35,7 @@ public class Tasks {
 
     @Override
     public String toString() {
-        return "Task: " + this.getName() +
+        return "\nTask: " + this.getName() +
                 "\nDescription: " + this.getDescription() +
                 "\nPriority: " + this.getPriority();
     }

@@ -165,7 +165,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         try {
             String choice = choices(input);
-            while (!(choice.equals(0))) {
+            while (!(choice.equals("0"))) {
                 if (choice.equals("1")) {
                     newTask(input);
                     choice = choices(input);
