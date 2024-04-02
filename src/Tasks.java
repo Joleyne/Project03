@@ -1,4 +1,4 @@
-public class Tasks {
+public class Tasks implements Comparable<Tasks>{
     private String name;
     private String description;
     private int priority;
@@ -38,5 +38,16 @@ public class Tasks {
         return "\nTask: " + this.getName() +
                 "\nDescription: " + this.getDescription() +
                 "\nPriority: " + this.getPriority();
+    }
+
+    @Override
+    public int compareTo(Tasks other) {
+        if (this.priority < other.priority) {
+            return this.priority;
+        }
+        else if(this.priority == other.priority){
+            return this.name.compareTo(other.name);
+        }else
+            return this.description.compareTo(other.description);
     }
 }

@@ -1,10 +1,11 @@
 import com.sun.source.util.TaskEvent;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// Joleyne Hernandez 03/06/24 CSCI 1660
+// Joleyne Hernandez 04/02/24 CSCI 1660
 public class Main {
     public static ArrayList<Tasks> myTask = new ArrayList<>();
 
@@ -81,7 +82,10 @@ public class Main {
         switch (prior) {
             case 0:
                 System.out.println("Here are all the Task");
-                System.out.println(myTask);
+                Collections.sort(myTask);
+                for(Tasks a: myTask){
+                    System.out.println(a);
+                }
                 break;
             case 1:
                 System.out.println("Here are all the Task with priority of 1");
