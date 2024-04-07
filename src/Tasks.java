@@ -45,9 +45,7 @@ public class Tasks implements Comparable<Tasks>{
         if (this.priority < other.priority) {
             return this.priority;
         }
-        else if(this.priority == other.priority){
+        else
             return this.name.compareTo(other.name);
-        }else
-            return this.description.compareTo(other.description);
     }
 }
